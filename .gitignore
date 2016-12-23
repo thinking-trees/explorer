@@ -1,0 +1,10 @@
+/mtp.log
+**/npm-debug.log
+.sass-cache
+lib
+node_modules
+dist
+.tmp
+.sonar
+instrumented
+reports

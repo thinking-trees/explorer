@@ -1,0 +1,18 @@
+.pivot-bar {
+	position: fixed;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	width: map-get($pivot-bar-width, sm);
+	background-color: $gray-dark;
+	z-index: 1090;
+  transition: width .1s ease-in-out;
+
+	@include media-breakpoint-up(md) {
+		width: map-get($pivot-bar-width, md);
+
+    .mobile-context {
+      display: none;
+    }
+	}
+}
