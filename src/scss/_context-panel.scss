@@ -1,0 +1,15 @@
+.context-panel {
+	position: fixed;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	display: none;
+	background-color: $gray-light;
+	z-index: 1080;
+  transition: padding-left .1s ease;
+
+	@include media-breakpoint-up(md) {
+		display: block;
+		padding-left: map-get($pivot-bar-width, md);
+	} 
+}
