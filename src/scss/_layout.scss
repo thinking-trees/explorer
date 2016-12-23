@@ -1,0 +1,51 @@
+// Layout Variables
+// 
+// Layout Breakpoints
+
+$header-height: (
+  sm: 50px,
+  md: 75px
+) !default;
+
+$pivot-bar-width: (
+  //small screen (mobile)
+  sm: 100vw * 0.8,
+  //medium screen (tablet)
+  md: 60px
+) !default;
+
+
+// Header
+
+$header-width-sm-menu-opened: 100vw - map-get($pivot-bar-width, sm);
+$header-margin-left-sm-menu-opened: map-get($pivot-bar-width, sm);
+
+
+// Context Panel
+
+$context-panel-width-sm-menu-opened: map-get($pivot-bar-width, sm);
+
+
+// Content
+
+$content-width-sm-menu-opened: 100vw - map-get($pivot-bar-width, sm);
+$content-margin-left-sm-menu-opened: map-get($pivot-bar-width, sm);
+
+
+// Color
+
+$content-background-color: $gray-lightest;
+
+
+//General styles
+
+html,
+body,
+.explorer-app {
+  position: relative;
+  height: 100%;
+}
+
+.explorer-app {
+	overflow: hidden;
+}
