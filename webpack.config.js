@@ -37,7 +37,7 @@ module.exports = {
       {
         test: /\.scss$/,
         exclude: /(node_modules|lib)/,
-        loader: ExtractTextWebpackPlugin.extract('css!sass')
+        loader: ExtractTextWebpackPlugin.extract('css!postcss!sass')
       },
       {
         test: /\.(eot|svg|ttf|woff|woff2)/,
@@ -73,11 +73,20 @@ module.exports = {
     historyApiFallback: true,
     inline: true
   },
+
+  /**
+   * Config for Webpack Loaders
+   */
   eslint: {
     failOnError: false,
     formatter: require('eslint-friendly-formatter'),
     outputReport: {
       filePath: '../reports/code-style/code-style-checking.xml'
     }
+  },
+  postcss: {
+    plugins: [
+      require('autoprefixer')
+    ]
   }
 };
