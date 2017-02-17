@@ -1,6 +1,7 @@
 'use strict';
 
 let path = require('path');
+let webpack = require('webpack');
 let ExtractTextWebpackPlugin = require('extract-text-webpack-plugin');
 let HtmlWebpackPlugin = require('html-webpack-plugin');
 let CopyWebpackPlugin = require('copy-webpack-plugin');
@@ -11,7 +12,7 @@ module.exports = {
   ],
   output: {
     path: './dist',
-    filename: 'app.[hash:9].js'
+    filename: 'app.[hash:9].min.js'
   },
   module: {
     preLoaders: [
@@ -50,10 +51,17 @@ module.exports = {
     ]
   },
   plugins: [
-    new ExtractTextWebpackPlugin('app.[hash:9].css'),
+    new ExtractTextWebpackPlugin('app.[hash:9].min.css'),
     new HtmlWebpackPlugin({
       template: './src/index.html',
       inject: 'body'
+    }),
+    new webpack.optimize.UglifyJsPlugin({
+      compress: {
+        angular: true,
+        drop_console: true,
+        warnings: false
+      }
     }),
     new CopyWebpackPlugin([
       {from: './src/index.html'}
