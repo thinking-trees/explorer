@@ -6,7 +6,9 @@
   "scripts": {
     "build": "rimraf dist && webpack --progress",
     "server": "webpack-dev-server --history-api-fallback --inline --progress",
-    "start": "npm run server"
+    "start": "npm run server",
+    "test:unit": "karma start --single-run",
+    "test:unit:debug": "karma start --no-single-run"
   },
   "repository": {
     "type": "git",
@@ -18,6 +20,7 @@
   "author": "Jackson",
   "license": "MIT",
   "devDependencies": {
+    "angular-mocks": "^1.6.2",
     "autoprefixer": "^6.6.1",
     "babel-core": "^6.10.4",
     "babel-loader": "^6.2.4",
@@ -32,6 +35,13 @@
     "exports-loader": "^0.6.3",
     "extract-text-webpack-plugin": "^1.0.1",
     "html-webpack-plugin": "^2.22.0",
+    "jasmine-core": "^2.5.2",
+    "karma": "^1.4.1",
+    "karma-chrome-launcher": "^2.0.0",
+    "karma-jasmine": "^1.1.0",
+    "karma-mocha-reporter": "^2.2.2",
+    "karma-sourcemap-loader": "^0.3.7",
+    "karma-webpack": "^2.0.2",
     "node-sass": "^3.8.0",
     "postcss-loader": "^1.2.2",
     "raw-loader": "^0.5.1",

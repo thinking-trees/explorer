@@ -81,6 +81,7 @@ module.exports = {
     historyApiFallback: true,
     inline: true
   },
+  devtool: 'source-map',
 
   /**
    * Config for Webpack Loaders
