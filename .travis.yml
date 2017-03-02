@@ -1,0 +1,15 @@
+language: node_js
+node_js:
+  - '5'
+branches:
+  only:
+    - master
+    - develop
+install:
+  - npm install -g bower
+  - npm install
+  - bower install
+before_script:
+  - 'npm install -g karma-cli'
+script:
+  - npm run test:unit
