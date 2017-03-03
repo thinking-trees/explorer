@@ -8,7 +8,8 @@
     "server": "webpack-dev-server --history-api-fallback --inline --progress",
     "start": "npm run server",
     "test:unit": "karma start --single-run",
-    "test:unit:debug": "karma start --no-single-run"
+    "test:unit:debug": "karma start",
+    "test:unit:ci": "karma start --single-run --browsers PhantomJS"
   },
   "repository": {
     "type": "git",
@@ -40,6 +41,7 @@
     "karma-chrome-launcher": "^2.0.0",
     "karma-jasmine": "^1.1.0",
     "karma-mocha-reporter": "^2.2.2",
+    "karma-phantomjs-launcher": "^1.0.2",
     "karma-sourcemap-loader": "^0.3.7",
     "karma-webpack": "^2.0.2",
     "node-sass": "^3.8.0",
