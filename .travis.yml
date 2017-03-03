@@ -9,7 +9,5 @@ install:
   - npm install -g bower
   - npm install
   - bower install
-before_script:
-  - 'npm install -g karma-cli'
 script:
-  - npm run test:unit
+  - npm run test:unit:ci
