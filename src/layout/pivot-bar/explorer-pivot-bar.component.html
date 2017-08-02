@@ -1,1 +1,14 @@
-<div class="mobile-context" ui-view="explorer-context"></div>
+<nav>
+  <ul class="pivot-bar-menus">
+    <li class="pivot-bar-menu-item" ng-repeat="menuItem in $ctrl.menuItems | orderBy:'order'">
+      <a ui-sref="{{menuItem.name}}"
+         ui-sref-active="active"
+         title="{{menuItem.title}}" 
+         ng-click="$ctrl.toggleMenu(menuItem)">
+        <span class="menu-icon mdi mdi-{{menuItem.icon}}"></span>
+      </a>
+      <span class="sr-only">{{menuItem.title}}</span>
+      <div ng-if="menuItem.opened" class="mobile-context" ui-view="explorer-context"></div>
+    </li>
+  </ul>
+</nav>
