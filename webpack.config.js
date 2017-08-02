@@ -71,7 +71,8 @@ module.exports = {
     extensions: ['', '.js'],
     alias: {
       angular: path.resolve(__dirname, 'lib/angular/angular'),
-      'angular-ui-router': path.resolve(__dirname, 'lib/angular-ui-router/release/angular-ui-router')
+      'angular-ui-router': path.resolve(__dirname, 'lib/angular-ui-router/release/angular-ui-router'),
+      lodash: path.resolve(__dirname, 'lib/lodash/dist/lodash.min')
     }
   },
   devServer: {
