@@ -1,6 +1,6 @@
 class ContextController {
   constructor() {
-    this.$onInit = function () {
+    this.$onInit = () => {
       this.name = 'Context';
     };
   }

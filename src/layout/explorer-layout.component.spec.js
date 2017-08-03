@@ -1,6 +1,6 @@
 import angular from 'angular';
 import 'angular-mocks';
-import layoutComponentOptions from './layout.component';
+import layoutComponentOptions from './explorer-layout.component';
 
 describe('Component: layout', () => {
 

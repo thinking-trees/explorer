@@ -1,6 +1,6 @@
 class HeaderController {
   constructor() {
-    this.$onInit = function () {
+    this.$onInit = () => {
       this.name = 'Header';
     };
   }

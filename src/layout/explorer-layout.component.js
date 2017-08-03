@@ -1,6 +1,6 @@
 class LayoutController {
   constructor() {
-    this.$onInit = function () {
+    this.$onInit = () => {
       this.menuOpened = true;
     };
   }
@@ -12,5 +12,5 @@ class LayoutController {
 
 export default {
   controller: LayoutController,
-  template: require('./layout.component.html')
+  template: require('./explorer-layout.component.html')
 };

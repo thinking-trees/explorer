@@ -1,10 +1,11 @@
 import angular from 'angular';
-import uiRouter from 'angular-ui-router';
-
 import appConfig from './app.config';
-import layoutModule from './layout/layout.module';
+import explorerCoreModule from './explorer-core.module';
+import explorerLayoutModule from './layout/explorer-layout.module';
+import explorerTwoDimensionalBrushModule from 
+  './features/explorer-two-dimensional-brush/explorer-two-dimensional-brush.module';
 
 export default angular
-  .module('app', [uiRouter, layoutModule])
+  .module('app', [explorerCoreModule, explorerLayoutModule, explorerTwoDimensionalBrushModule])
   .config(appConfig)
   .name;

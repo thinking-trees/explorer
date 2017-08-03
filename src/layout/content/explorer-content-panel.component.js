@@ -1,6 +1,6 @@
 class ContentController {
   constructor() {
-    this.$onInit = function () {
+    this.$onInit = () => {
       this.name = 'Content';
     };
   }
