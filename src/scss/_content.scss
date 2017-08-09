@@ -11,6 +11,7 @@
 	.view {
     float: left;
     width: 100%;
+    padding-top: 15px;
 		margin-top: map-get($header-height, sm);
 
 		@include media-breakpoint-up(md) {

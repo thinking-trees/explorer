@@ -8,7 +8,7 @@ $white: #FFFFFF;
   z-index: 1090;
 	width: map-get($pivot-bar-width, sm);
   padding: 10px 5px;
-	background-color: $gray-dark;
+	background-color: $gray;
   transition: width .1s ease-in-out;
 
 	@include media-breakpoint-up(md) {

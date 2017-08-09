@@ -55,6 +55,5 @@ rules:
       words: true
       nonwords: false
   spaced-comment:
-    - error
-    - always
+    - off
   strict: error

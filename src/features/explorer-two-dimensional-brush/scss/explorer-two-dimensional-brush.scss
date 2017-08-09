@@ -1,6 +1,19 @@
+/* Common - Start */
+.overflow-hidden {
+  overflow: hidden !important;
+}
+/* Common - End */
+
+/* Two Dimensional Brush Portal - Start */
 .scene-button-add {
   display: flex;
   justify-content: center;
   align-items: center;
   font-size: 28px; 
 }
+
+.brush-area-height {
+  height: 80vh;
+  overflow: auto;
+}
+/* Two Dimensional Brush Portal - End */

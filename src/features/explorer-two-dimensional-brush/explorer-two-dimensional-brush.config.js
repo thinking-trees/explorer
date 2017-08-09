@@ -26,7 +26,7 @@ function explorerTwoDimensionalBrushConfig($stateProvider, $urlRouterProvider) {
       url: '/portal',
       views: {
         'explorerTwoDimensionalBrushContent': {
-          template: 'ExplorerTwoDimensionalBrushContent'
+          template: '<explorer-two-dimensional-brush-portal></explorer-two-dimensional-brush-portal>'
         }
       }
     });
