@@ -5,3 +5,4 @@ import uiBootstrap from 'angular-ui-bootstrap';
 export default angular
   .module('explorer.core', [uiRouter, uiBootstrap])
   .name;
+  
