@@ -1,29 +1,30 @@
 .content {
-	position: initial;
-	height: 100vh;
-	overflow-y: auto;
-	z-index: 1060;
+  position: initial;
+  height: 100vh;
+  overflow-y: auto;
+  z-index: 1060;
 
-	@include media-breakpoint-down(sm) {
-		width: 100%;
-	}
+  @include media-breakpoint-down(sm) {
+    width: 100%;
+  }
 
-	.view {
+  .view {
     float: left;
     width: 100%;
-		margin-top: map-get($header-height, sm);
+    padding-top: 15px;
+    margin-top: map-get($header-height, sm);
 
-		@include media-breakpoint-up(md) {
-			margin-top: map-get($header-height, md);
-		}
-	}
+    @include media-breakpoint-up(md) {
+      margin-top: map-get($header-height, md);
+    }
+  }
 }
 
 .menu-opened {
-	.content {
-		@include media-breakpoint-down(sm) {
-			width: $content-width-sm-menu-opened;
-			margin-left: $content-margin-left-sm-menu-opened;
-		}
-	}
+  .content {
+    @include media-breakpoint-down(sm) {
+      width: $content-width-sm-menu-opened;
+      margin-left: $content-margin-left-sm-menu-opened;
+    }
+  }
 }

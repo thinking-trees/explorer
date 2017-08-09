@@ -3,7 +3,8 @@
     <li class="pivot-bar-menu-item" ng-repeat="menuItem in $ctrl.menuItems | orderBy:'order'">
       <a ui-sref="{{menuItem.name}}"
          ui-sref-active="active"
-         title="{{menuItem.title}}" 
+         uib-tooltip="{{menuItem.title}}" 
+         tooltip-placement="right"
          ng-click="$ctrl.toggleMenu(menuItem)">
         <span class="menu-icon mdi mdi-{{menuItem.icon}}"></span>
       </a>

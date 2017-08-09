@@ -1,0 +1,15 @@
+<div class="card explorer-card">
+  <div class="card-header">
+    <span class="card-title">Scene</span>
+    <nav class="pull-xs-right explorer-card-actions">
+      <button class="btn" type="button"
+              uib-tooltip="SAVE"
+              tooltip-placement="bottom">
+        <span class="mdi mdi-save"></span>
+      </button>
+    </nav>
+  </div>
+  <div class="card-block brush-area-height overflow-hidden p-a-0">
+    <canvas id="scene" width="{{$ctrl.canvasWidth}}" height="{{$ctrl.canvasHeight}}"></canvas>
+  </div>
+</div>

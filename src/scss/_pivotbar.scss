@@ -1,23 +1,23 @@
 $white: #FFFFFF;
 
 .pivot-bar {
-	position: fixed;
-	top: 0;
-	left: 0;
-	bottom: 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
   z-index: 1090;
-	width: map-get($pivot-bar-width, sm);
+  width: map-get($pivot-bar-width, sm);
   padding: 10px 5px;
-	background-color: $gray-dark;
+  background-color: $gray;
   transition: width .1s ease-in-out;
 
-	@include media-breakpoint-up(md) {
-		width: map-get($pivot-bar-width, md);
+  @include media-breakpoint-up(md) {
+    width: map-get($pivot-bar-width, md);
 
     .mobile-context {
       display: none;
     }
-	}
+  }
 }
 
 .pivot-bar-menus {
