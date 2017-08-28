@@ -4,7 +4,9 @@
   </div>
   <div class="card-block brush-area-height">
     <ul>
-      <li>FLOOR</li>
+      <li ng-repeat="shapeModel in $ctrl.shapeModels">
+        {{shapeModel.name}}
+      </li>
     </ul>
   </div>
 </aside>

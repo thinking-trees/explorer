@@ -1,8 +1,14 @@
 class ExplorerTwoDimensionalShapeListController {
   constructor() {
     this.$onInit = () => {
-      
+      this.loadShapeModels();
     };
+  }
+
+  loadShapeModels() {
+    this.shapeModels = [
+      {name: 'FLOOR'}
+    ];    
   }
 }
 

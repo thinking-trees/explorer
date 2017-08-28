@@ -4,7 +4,7 @@ import layoutComponentOptions from './explorer-layout.component';
 
 describe('Component: layout', () => {
 
-  const MODULE_NAME = 'app.layout';
+  const MODULE_NAME = 'explorer.layout';
   const COMPONENT_NAME = 'layout';
   let $rootscope = void 0;
   let $componentController = void 0;
