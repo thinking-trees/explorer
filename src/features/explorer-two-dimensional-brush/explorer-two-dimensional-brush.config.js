@@ -1,7 +1,7 @@
 explorerTwoDimensionalBrushConfig.$inject = ['$stateProvider', '$urlRouterProvider'];
 
 function explorerTwoDimensionalBrushConfig($stateProvider, $urlRouterProvider) {
-  $urlRouterProvider.otherwise('/two-dimensional-brush/portal');
+  $urlRouterProvider.otherwise('/two-dimensional-brush/portal/');
 
   $stateProvider
     .state('explorer.twoDimensionalBrush', {
@@ -23,7 +23,7 @@ function explorerTwoDimensionalBrushConfig($stateProvider, $urlRouterProvider) {
 
   $stateProvider
     .state('explorer.twoDimensionalBrush.portal', {
-      url: '/portal',
+      url: '/portal/:sceneType?/:sceneId',
       views: {
         'explorerTwoDimensionalBrushContent': {
           template: '<explorer-two-dimensional-brush-portal></explorer-two-dimensional-brush-portal>'

@@ -1,0 +1,193 @@
+$car-color: #0275d8;
+$car-length: 200px;
+$car-height: 150px;
+$wind-height: 2px;
+
+.canvas-runner {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  background: #fff;
+
+  /* Car Styles - Start */
+  .car {
+    display: flex;
+    position: relative;
+    width: $car-length;
+    height: $car-height;
+    justify-content: center;
+    align-items: flex-end;
+    box-sizing: border-box;
+    animation: car-shake .5s 0s ease-in-out infinite;
+  }
+
+  .car-body-front,
+  .car-body-rear {
+    position: absolute;
+    top: $car-length * 0.2;
+    width: $car-length * 0.3;
+    height: $car-length * 0.15;
+    border-radius: ($car-length * 0.3) ($car-length * 0.3) 0 0;
+    background: $car-color;
+  }
+
+  .car-body-middle {
+    position: absolute;
+    top: 0;
+    left: $car-length * 0.15;
+    width: $car-length * 0.7;
+    height: $car-length * 0.35;
+    border-radius: ($car-length * 0.7) ($car-length * 0.7) 0 0;
+    background: $car-color;
+  }
+
+  .car-body-front {
+    left: 0;
+  }
+
+  .car-body-rear {
+    right: 0;
+  }
+
+  .car-wheel {
+    position: absolute;
+    top: $car-length * 0.25;
+    width: $car-length * 0.2;
+    height: $car-length * 0.2;
+    border: ($car-length * 0.01) solid #fff;
+    border-radius: 100%;
+    background: $car-color;
+
+    &::before {
+      content: " ";
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      width: $car-length * 0.1;
+      height: $car-length * 0.1;
+      margin: $car-length * -0.05;
+      border: ($car-length * 0.05) solid $gray-light;
+      border-top-color: transparent;
+      border-bottom-color: transparent;
+      border-radius: 100%;
+      background-color: #fff;
+      animation: car-wheels-running .25s 0s ease-in-out infinite;
+    }
+
+    &.wheel-front {
+      right: $car-length * 0.1;
+    }
+
+    &.wheel-rear {
+      left: $car-length * 0.1;
+    }
+  }
+
+  .car-text {
+    font-size: 1.2rem;
+    font-weight: bold;
+  }
+  /* Car Styles - End */
+
+  /* Car Animations - Start */
+  @keyframes car-shake {
+    0% {
+      transform: rotate(0);
+    }
+    50% {
+      transform: rotate(-1deg);
+    }
+    100% {
+      transform: rotate(1deg);
+    }
+  }
+  
+  @keyframes car-wheels-running {
+    from {
+      transform: rotate(0);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  /* Car Animations - End */
+
+  /* Winds Styles - Start */
+  .winds {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+
+    div {
+      position: absolute;
+      height: $wind-height;
+      width: 20%;
+      background: $gray-light;
+      animation: wind-flow-fast .5s 0s linear infinite;
+    }
+
+    div:nth-child(1) {
+      top: 10%;
+      width: 30%;
+      animation-duration: .3s;
+      animation-delay: -2s;
+    }
+
+    div:nth-child(2) {
+      top: 20%;
+      animation: wind-flow-slow .7s -1s linear infinite;
+    }
+
+    div:nth-child(3) {
+      top: 30%;
+      animation-delay: -2s;
+    }
+
+    div:nth-child(4) {
+      top: 55%;
+      animation: wind-flow-slow .8s -3s linear infinite;
+    }
+
+    div:nth-child(5) {
+      top: 70%;
+      width: 40%;
+      animation-duration: .4s;
+      animation-delay: -1s;
+    }
+
+    div:nth-child(6) {
+      top: 80%;
+      animation: wind-flow-slow .6s -1s linear infinite;
+    }
+
+    div:nth-child(7) {
+      top: 90%;
+    }
+  }
+  /* Winds Styles - End */
+
+  /* Wind Animations - Start */
+  @keyframes wind-flow-fast {
+    from {
+      left: 300%;
+    }
+    to {
+      left: -300%;
+      opacity: 0;
+    }
+  }
+
+  @keyframes wind-flow-slow {
+    from {
+      left: 100%;
+    }
+    to {
+      left: -100%;
+      opacity: 0;
+    }
+  }
+  /* Wind Animations - End */
+
+}

@@ -1,0 +1,7 @@
+const DEFAULT_SHAPE_WIDTH = 600; // Unit: mm
+const DEFAULT_SHAPE_HEIGHT = 1500; // Unit: mm
+
+export {
+  DEFAULT_SHAPE_WIDTH,
+  DEFAULT_SHAPE_HEIGHT
+};

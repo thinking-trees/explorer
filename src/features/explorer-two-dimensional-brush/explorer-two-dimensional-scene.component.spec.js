@@ -1,5 +1,6 @@
 import angular from 'angular';
 import 'angular-mocks';
+import uiRouter from 'angular-ui-router';
 import sceneComponentOptions from './explorer-two-dimensional-scene.component';
 
 describe('Component: explorerTwoDimensionalScene', () => {
@@ -13,7 +14,7 @@ describe('Component: explorerTwoDimensionalScene', () => {
 
   beforeEach(() => {
     angular
-      .module(MODULE_NAME, [])
+      .module(MODULE_NAME, [uiRouter])
       .component(COMPONENT_NAME, sceneComponentOptions);
   });
 
@@ -24,6 +25,9 @@ describe('Component: explorerTwoDimensionalScene', () => {
       childScope = $rootscope.$new();
       $componentController = $injector.get('$componentController');
     });
+
+    angular.element(document).find('body')
+      .append('<canvas id="scene"></canvas>');
   });
 
   beforeEach(() => {
@@ -33,8 +37,9 @@ describe('Component: explorerTwoDimensionalScene', () => {
   });
 
   it('should set default size for scene on canvas', () => {
-    sceneComponent.$onInit();
+    sceneComponent.init();
 
+    expect(sceneComponent._canvasContextForScene).toBeDefined();
     expect(sceneComponent.canvasWidth).toEqual(760);
     expect(sceneComponent.canvasHeight).toEqual(600);
   });

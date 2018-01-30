@@ -1,0 +1,47 @@
+.canvas-spinner {
+  box-sizing: border-box;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%);
+
+  .canvas-spinner-outter-circle,
+  .canvas-spinner-inner-circle {
+    position: absolute;
+    border: 5px solid $gray-dark;
+    border-bottom-color: transparent;
+    border-top-color: transparent;
+    border-radius: 100%;
+    animation: rotate 1s 0s ease-in-out infinite;
+  }
+
+  .canvas-spinner-outter-circle {
+    left: -20px;
+    top: -20px;
+    height: 100px;
+    width: 100px;
+  }
+
+  .canvas-spinner-inner-circle {
+    top: 7.5px;
+    left: 7.5px;
+    width: 45px;
+    height: 45px;
+    animation-duration: .5s;
+    animation-direction: reverse;
+  }
+
+  @keyframes rotate {
+
+    0% {
+      transform: rotate(0) scale(1);
+    }
+    50% {
+      transform: rotate(180deg) scale(.6);
+    }
+    100% {
+      transform: rotate(360deg) scale(1);
+    }
+
+  }
+}
