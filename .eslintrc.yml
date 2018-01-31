@@ -2,6 +2,7 @@ env:
   browser: true
   commonjs: true
   es6: true
+  jasmine: true
 extends: 'eslint:recommended'
 parserOptions:
   sourceType: module
@@ -57,3 +58,5 @@ rules:
   spaced-comment:
     - off
   strict: error
+  no-unused-vars: warn
+  no-console: warn

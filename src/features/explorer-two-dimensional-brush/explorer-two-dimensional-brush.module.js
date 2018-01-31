@@ -5,6 +5,9 @@ import contentPanelComponent from './explorer-two-dimensional-brush-content-pane
 import brushPortalComponent from './explorer-two-dimensional-brush-portal.component';
 import shapeListComponent from './explorer-two-dimensional-shape-list.component';
 import sceneComponent from './explorer-two-dimensional-scene.component';
+import canvasRunnerComponent from './explorer-canvas-runner.component';
+import sceneContainerDroppableDirectiveFactory from './scene-container-droppable.directive';
+import shapeDraggableDirectiveFactory from './shape-draggable.directive';
 import './scss/explorer-two-dimensional-brush.scss';
 
 export default angular
@@ -15,4 +18,7 @@ export default angular
   .component('explorerTwoDimensionalBrushPortal', brushPortalComponent)
   .component('explorerTwoDimensionalShapeList', shapeListComponent)
   .component('explorerTwoDimensionalScene', sceneComponent)
+  .component('explorerCanvasRunner', canvasRunnerComponent)
+  .directive('explorerSceneContainerDroppable', sceneContainerDroppableDirectiveFactory)
+  .directive('explorerShapeDraggable', shapeDraggableDirectiveFactory)  
   .name;

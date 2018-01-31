@@ -32,10 +32,17 @@ describe('Component: explorerTwoDimensionalShapeList', () => {
     });
   });
 
-  it('should load shape models', () => {
-    shapeListComponent.loadShapeModels();
+  it('should select FLOOR category for shapes', () => {
+    let floorCategory = 'FLOOR';
+    shapeListComponent.selectCategory(floorCategory);
 
-    expect(shapeListComponent.shapeModels).toBeDefined();
+    expect(shapeListComponent.currentActivedCategory).toEqual(floorCategory);
+  });
+
+  it('should load shape list', () => {
+    shapeListComponent.loadShapeList();
+
+    expect(shapeListComponent.shapeList).toBeDefined();
   });
 
 });

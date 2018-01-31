@@ -2,14 +2,29 @@
   <div class="card-header">
     <span class="card-title">Scene</span>
     <nav class="pull-xs-right explorer-card-actions">
-      <button class="btn" type="button"
+      <button class="btn" type="button" ng-repeat="action in $ctrl.scene.actions"
+              uib-tooltip="action.tooltip"
+              tooltip-placement="bottom"
+              ng-disabled="$ctrl.isSaving || $ctrl.shapesLoading"
+              ng-click="action.do()">
+        <span class="mdi mdi-{{action.icon}}"></span>
+      </button>
+      <button class="btn" type="button" ng-class="{'disabled': $ctrl.isSaving}"
               uib-tooltip="SAVE"
-              tooltip-placement="bottom">
+              tooltip-placement="bottom"
+              ng-disabled="$ctrl.isSaving || $ctrl.shapesLoading"
+              ng-click="$ctrl.onSave()">
         <span class="mdi mdi-save"></span>
       </button>
     </nav>
   </div>
-  <div class="card-block brush-area-height overflow-hidden p-a-0">
-    <canvas id="scene" width="{{$ctrl.canvasWidth}}" height="{{$ctrl.canvasHeight}}"></canvas>
+  <div class="scene-container card-block brush-area-height overflow-hidden p-a-0"
+       explorer-scene-container-droppable>
+    <div class="canvas-spinner" ng-if="($ctrl.rendering || $ctrl.shapesLoading) && !$ctrl.isSaving">
+      <div class="canvas-spinner-outter-circle"></div>
+      <div class="canvas-spinner-inner-circle"></div>
+    </div>
+    <explorer-canvas-runner ng-if="$ctrl.isSaving"></explorer-canvas-runner>
+    <canvas id="scene" tabindex="0" width="{{$ctrl.canvasWidth}}" height="{{$ctrl.canvasHeight}}"></canvas>
   </div>
 </div>

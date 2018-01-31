@@ -1,3 +1,9 @@
+@import '../../../scss/variables';
+@import 'canvas-runner';
+@import 'canvas-spinner';
+@import 'shape-list-component';
+@import 'scene-component';
+
 /* Common - Start */
 .overflow-hidden {
   overflow: hidden !important;
